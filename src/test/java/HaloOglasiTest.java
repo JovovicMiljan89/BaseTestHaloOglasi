@@ -75,14 +75,7 @@ public class HaloOglasiTest extends BaseTestHaloOglasi{
         logInPage.EmailOrUsernameInputField.sendKeys(testEmail);
         logInPage.PasswordInputField.sendKeys(password);
         logInPage.LoginButton.click();
-        Thread.sleep(5000);
-        userPageHalooglasi.MyProfileHoverAction();
-        Assert.assertTrue(userPageHalooglasi.MainDisplayedUsernameDisplayed());
-        Assert.assertEquals("MiljanJovovicJanaJovovic", userPageHalooglasi.MainDisplayedUsernameGetText());
-        Assert.assertTrue(userPageHalooglasi.EmailisDisplayed());
-        Assert.assertEquals("email " + testEmail ,userPageHalooglasi.EmailisDisplayedGetText());
-        Assert.assertTrue(userPageHalooglasi.SecondaryDisplayedUserNameDisplayed());
-        Assert.assertEquals("korisničko ime: " + testIme,userPageHalooglasi.SecondaryDisplayedUserNameGetText());
+       
 
     }
 }
