@@ -7,14 +7,16 @@ public class userPageHalooglasi extends BaseTestHaloOglasi{
     public userPageHalooglasi (){
         PageFactory.initElements(driver,this);
     }
-    @FindBy(xpath = "//div[@class='header-category-link logged-in-wrapper opened']//p[@class='user-display-name'][normalize-space()='MiljanJovovicJanaJovovic']")
+    
+    @FindBy(css = "div[class='header-category-link logged-in-wrapper opened'] p[class='user-display-name']")
     WebElement MainDisplayedUserName;
-    @FindBy(xpath = "//div[@class='header-category-link logged-in-wrapper opened']//p[@class='user-email']")
+    @FindBy(css = "div[class='header-category-link logged-in-wrapper opened'] p[class='user-email']")
     WebElement EmailDisplayed;
-    @FindBy(xpath = "//div[@class='header-category-link logged-in-wrapper opened']//div[@class='user-data']")
+    @FindBy(css = "div[class='header-category-link logged-in-wrapper opened'] div[class='user-data']")
     WebElement SecondaryDisplayedUserName;
     @FindBy(xpath = "//p[@class='header-label']")
     WebElement MyProfileHover;
+
 
     public void MyProfileHoverAction(){
         actions.moveToElement(MyProfileHover).perform();
